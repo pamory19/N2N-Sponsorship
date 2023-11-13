@@ -1,4 +1,49 @@
 img {
     width: 150px;
     height: 200px;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #DBDBD0;
+}
+
+
+th {
+    text-align: left;
+    background: #B5B5AC;
+}
+
+caption {
+    background: #4F4F4B;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+th, td, caption {
+    padding: 1rem;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+@media (max-width: 650px) {
+    th {
+        display: none;
+    }
+
+    td {
+        display: block;
+    }
+
+    td::before {
+        content: attr(data-cell) ": ";
+        display: block;
+        font-weight: 700;
+    }
 }
