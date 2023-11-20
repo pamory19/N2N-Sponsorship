@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "main": "index.html",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "lite-server": "^2.6.1",
+    "rimraf": "^5.0.5"
   },
   "scripts": {
     "start": "npm run",
     "lite": "lite-server",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin images/* -o dist/images",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "build": "npm run clean && npm run imagemin && npm run usemin",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

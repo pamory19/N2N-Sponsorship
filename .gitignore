@@ -1,2 +1,5 @@
-node_modules
+node_modulee
 .DS_Store
+dist
+.parcel-cache
+.firebase
