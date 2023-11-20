@@ -24,6 +24,19 @@ caption {
     text-transform: uppercase;
 }
 
+button {
+    border-style: solid;
+    border-radius: 12px;
+    border-color: #000000;
+    border-width: 1px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+button a {
+    text-decoration: none;
+    color: #000000;
+}
+
 th, td, caption {
     padding: 1rem;
 }
