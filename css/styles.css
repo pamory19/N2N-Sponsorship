@@ -7,17 +7,18 @@ img {
 table {
     width: 100%;
     border-collapse: collapse;
-    background: #DBDBD0;
+    background: #FFFFFF;
 }
 
 
 th {
     text-align: left;
-    background: #B5B5AC;
+    background: #0086BF;
+    color: #FFFFFF;
 }
 
 caption {
-    background: #4F4F4B;
+    background: #005eb8;
     color: white;
     font-size: medium;
     font-weight: 600;
@@ -28,13 +29,19 @@ button {
     border-style: solid;
     border-radius: 12px;
     border-color: #000000;
+    background-color: #005eb8;
     border-width: 1px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    
 }
 
 button a {
     text-decoration: none;
-    color: #000000;
+    color: #FFFFFF;
+}
+
+button:hover {
+    transform: scale(1.2);
 }
 
 th, td, caption {
@@ -54,9 +61,15 @@ table, th, td {
         display: block;
     }
 
-    td::before {
+    td:not([data-cell])::before {
+        display: block;
+        font-weight: 700;
+    }
+
+    td[data-cell]::before {
         content: attr(data-cell) ": ";
         display: block;
         font-weight: 700;
     }
+
 }
